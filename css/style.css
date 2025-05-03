@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #fff;
+    --button-bg-color: #ffd936;
+    --button-color: #536924;
+
+}
+
+body{
+    height: min-content;
+    width: 100vw;
+    overflow-x: hidden;
+}
+/* Same Classes */
+.same-btn{
+    color: var(--button-color);
+    background-color: var(--button-bg-color);
+    border: 0;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+.same-btn:hover{
+    background-color: #96791c;
+}
+
+/** Header */
+header{
+    padding: 0 20px ;
+    background: linear-gradient(to right,  rgba(0, 0, 0, 0.144)) , url(../image/header-hero.jpg) ;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+header .logo img{
+    width: 60px;
+    margin-left: 50px;
+}
+header .nav-items ul>li, button{
+    padding: 0 16px;
+}
+header .nav-items button{
+    padding: 10px 20px; margin-right: 50px;
+}
+/**Main section */
+main{
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.hero-container h1{
+    font-size: 50px;
+}
+.hero-container h1 span{
+    font-size: 98px;
+}
+.hero-container p{
+    font-size: 18px;
+    padding: 0px 360px;
+}
+
+.hero-container button{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.hero-container button:hover{
+    background-color: #96791c ;
+    color: white;
+}
+/** Service Section */
+#services{
+    width: 85vw;
+    margin: auto;
+    height: 100vh;
+    margin-top: 100px;
+
+}
+#services h2{
+    color: var(--button-color);
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 15px;
+    text-decoration-color: #ffd936;
+    -moz-text-decoration-color:#ffd936;
+}
+
+#services .service-section{
+    margin-top: 100px;
+}
+.service-column{
+    height: 500px;
+    padding: 15px;
+    /* background-color: #536924; */
+}
+.service-column img{
+    height: 450px;
+}
+.service-column h3{
+    font-size: 20px;
+    color: #536924;
+    margin: 9px 0;
+}
+.service-column p{
+    color: #526840bf;
+    padding: 0 20px 0 0;
+}
+
+/** Review Section */
+#review{
+    width: 98vw;
+    height: 470px;
+    background-color: #53692433;
+    margin: 100px auto ;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+.review-container{
+    margin: 0 25px;
+}
+#review .first img{
+    width: 37px;
+    opacity: 50%;
+}
+#review .second p{
+    font-size: 36px;
+    text-align: center;
+    color: #536942;
+
+}
+#review .third img{
+    width: 60px;
+}
+#review .third .content{
+    text-align: center;
+    font-size: 18px;
+    color: #536924;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+/** About Section */
+#about{
+    height: 600px;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 50px 0;
+
+}
+#about .about-col-1{
+    flex-basis: 50%;
+}
+#about .about-col-1 p:first-child{
+    font-size: 12px;
+    color: #536941b3;
+}
+#about .about-col-1 h2{
+    font-size: 40px;
+    color: #536942;
+}
+#about .about-col-1 p{
+    color: #536941cc;
+}
+#about .about-col-1 button{
+    font-size: 15px;
+    color: #536942;
+    padding: 16px 35px;
+    width: 180px;
+    border: 2px solid #536942;
+}
+#about .about-col-1 button:hover{
+    color: #718d20;
+    border-color: #718d20;
+    outline-color: #718d20;
+}
+#about .about-col-2{
+    flex-basis: 50%;
+    /* border: 2px solid blue; */
+}
+#about .about-col-2 img{
+    height: 85%;
+}
+/** Question Section */
+#question{
+    height: 480px;
+    width: 98vw;
+    margin: auto;
+    /* overflow: hidden; */
+    background-image: url(../image/footer-hero-big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#question .question-con h2{
+    text-transform: uppercase;
+    color: #536942;
+    font-size: 58px;
+}
+#question p{
+    font-size: 17px;
+    color: #526840bf;
+    margin: 5px 0 25px;
+    text-align: center;
+}
+#question button{
+    font-size: 14px;
+    color: #536942;
+    padding: 17px 35px;
+    background-color: #ffd936;
+    width: 170px;
+}
+#question button:hover{
+    background-color: #96791c;
+}
+/** Footer Section */
+footer{
+    height: 115px;
+    width: 98vw;
+    margin: auto;
+}
+footer .footer-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+footer .footer-col-1 ul li a{
+    color: #536942;
+}
+footer .footer-col-2 img{
+    width: 60px;
+}
+footer .footer-col-3 {
+    color: #536942;
+}
+
+/*? Media Query */
+@media (max-width: 520px) {
+    #question p{
+        font-size: 15px;
+        color: #526840bf;
+        margin: 0px 0 2px;
+        padding: 0 0px;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-container h1 {
+        font-size: 35px;
+    }
+    .hero-container h1 span {
+        font-size: 70px;
+    }
+    .hero-container p {
+        font-size: 16px;
+        padding: 0px ;
+    }
+    .hero-container button {
+        margin-top: 5px;
+    }
+    /* Service Section */
+    #services{
+        margin-bottom: 1199px;
+
+    }
+    /* Review Section */
+    #review{
+        margin-top: 2500px;
+    }
+    #review .first img{
+        width: 32px;
+
+    }
+    #review .second p{
+        font-size: 20px;
+    }
+    #review .third img{
+        width: 50px;
+    }
+    /* About Section */
+    #about{
+        margin-bottom: 50px;
+        height: min-content;
+    }
+    #about .about-col-1{
+        margin-bottom: 30px;
+        flex-basis: 100%;
+    }
+    #about .about-col-1 h2{
+        font-size: 33px;
+    }
+    #about .about-col-2 img{
+        width: 80%;
+    }
+    #about .about-col-2{
+        flex-basis: 100%;
+    }
+    /* Question Section  */
+    #question{
+        height: min-content;
+        padding: 20px;
+    }
+    #question .question-con h2{
+        text-transform: uppercase;
+        color: #536942;
+        font-size: 42px;
+    }
+    #question p{
+        font-size: 15px;
+        color: #526840bf;
+        margin: 0px 0 2px;
+        padding: 0 0px;
+        text-align: center;
+    }
+    /* Footer Section */
+    footer .footer-col{
+        padding: 3px;
+    }
+
+
+}
+@media (max-width: 992px) {
+    /* Hero Section */
+    .hero-container h1 {
+        font-size: 43px;
+    }
+    .hero-container h1 span {
+        font-size: 85px;
+    }
+    .hero-container p {
+        font-size: 16px;
+        padding: 0px 150px;
+    }
+    .hero-container button {
+        margin-top: 20px;
+    }
+    /* Review Section */
+    #review .second p{
+        font-size: 30px;
+    }
+    /* About Section */
+    #about .about-col-1{
+        margin-bottom: 30px;
+        flex-basis: 50%;
+    }
+    #about .about-col-1 h2{
+        font-size: 33px;
+    }
+    #about .about-col-2 img{
+        width: 100%;
+    }
+    #about .about-col-2{
+        flex-basis: 50%;
+    }
+    /* Question Section  */
+    #question{
+        /* margin-top: -500px; */
+    }
+    #question .question-con h2{
+        text-transform: uppercase;
+        color: #536942;
+        font-size: 58px;
+    }
+    #question p{
+        font-size: 17px;
+        color: #526840bf;
+        margin: 5px 0 25px;
+        text-align: center;
+    }
+
+}
+@media (max-width: 1200px) {
+    /* Review Section */
+    #review{
+        margin-top: 600px;
+
+    }
+    /* About Section */
+    #about .about-col-1{
+        margin-bottom: 30px;
+        flex-basis: 50%;
+    }
+    #about .about-col-1 h2{
+        font-size: 33px;
+    }
+    #about .about-col-2 img{
+        width: 100%;
+    }
+    #about .about-col-2{
+        flex-basis: 50%;
+    }
+    /* Question Section  */
+
+
+}
