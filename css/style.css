@@ -35,6 +35,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
 }
 header .logo img{
@@ -76,8 +77,9 @@ main{
 #services{
     width: 85vw;
     margin: auto;
-    height: 100vh;
+    height: min-content;
     margin-top: 100px;
+    margin-bottom: 100px;
 
 }
 #services h2{
@@ -90,6 +92,7 @@ main{
     text-underline-offset: 15px;
     text-decoration-color: #ffd936;
     -moz-text-decoration-color:#ffd936;
+    /* margin-bottom: 400px; */
 }
 
 #services .service-section{
@@ -98,7 +101,11 @@ main{
 .service-column{
     height: 500px;
     padding: 15px;
-    /* background-color: #536924; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 6px;
 }
 .service-column img{
     height: 450px;
@@ -112,16 +119,18 @@ main{
     color: #526840bf;
     padding: 0 20px 0 0;
 }
-
+.gap-div{
+    margin-top: 170px;
+}
 /** Review Section */
 #review{
     width: 98vw;
     height: 470px;
     background-color: #53692433;
-    margin: 100px auto ;
+    margin: auto ;
     overflow: hidden;
     box-sizing: border-box;
-
+    /* margin-top: 100px; */
 }
 .review-container{
     margin: 0 25px;
@@ -242,93 +251,39 @@ footer .footer-col-3 {
 }
 
 /*? Media Query */
-@media (max-width: 520px) {
-    #question p{
-        font-size: 15px;
-        color: #526840bf;
-        margin: 0px 0 2px;
-        padding: 0 0px;
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     /* Hero Section */
-    .hero-container h1 {
-        font-size: 35px;
-    }
-    .hero-container h1 span {
-        font-size: 70px;
-    }
-    .hero-container p {
-        font-size: 16px;
-        padding: 0px ;
-    }
-    .hero-container button {
-        margin-top: 5px;
-    }
-    /* Service Section */
-    #services{
-        margin-bottom: 1199px;
-
+    header{
+        height: 80vh;
     }
     /* Review Section */
     #review{
-        margin-top: 2500px;
-    }
-    #review .first img{
-        width: 32px;
+        margin-top: 80px;
 
     }
-    #review .second p{
-        font-size: 20px;
-    }
-    #review .third img{
-        width: 50px;
-    }
     /* About Section */
-    #about{
-        margin-bottom: 50px;
-        height: min-content;
-    }
     #about .about-col-1{
         margin-bottom: 30px;
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
     #about .about-col-1 h2{
         font-size: 33px;
     }
     #about .about-col-2 img{
-        width: 80%;
+        width: 100%;
     }
     #about .about-col-2{
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
     /* Question Section  */
-    #question{
-        height: min-content;
-        padding: 20px;
-    }
-    #question .question-con h2{
-        text-transform: uppercase;
-        color: #536942;
-        font-size: 42px;
-    }
-    #question p{
-        font-size: 15px;
-        color: #526840bf;
-        margin: 0px 0 2px;
-        padding: 0 0px;
-        text-align: center;
-    }
-    /* Footer Section */
-    footer .footer-col{
-        padding: 3px;
-    }
 
 
 }
 @media (max-width: 992px) {
     /* Hero Section */
+    header{
+        height: 80vh;
+    }
     .hero-container h1 {
         font-size: 43px;
     }
@@ -361,9 +316,7 @@ footer .footer-col-3 {
         flex-basis: 50%;
     }
     /* Question Section  */
-    #question{
-        /* margin-top: -500px; */
-    }
+
     #question .question-con h2{
         text-transform: uppercase;
         color: #536942;
@@ -377,27 +330,105 @@ footer .footer-col-3 {
     }
 
 }
-@media (max-width: 1200px) {
-    /* Review Section */
-    #review{
-        margin-top: 600px;
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-container h1 {
+        font-size: 35px;
+    }
+    .hero-container h1 span {
+        font-size: 70px;
+    }
+    .hero-container p {
+        font-size: 16px;
+        padding: 0px ;
+    }
+    .hero-container button {
+        margin-top: 5px;
+    }
+    /* Service Section */
+    #services{
+        margin-bottom: 80px;
 
     }
+    /* Review Section */
+    #review {
+    margin-top: 80px;
+    }
+    #review .first img{
+        width: 32px;
+
+    }
+    #review .second p{
+        font-size: 20px;
+    }
+    #review .third img{
+        width: 50px;
+    }
     /* About Section */
+    #about{
+        margin-bottom: 50px;
+        height: min-content;
+    }
     #about .about-col-1{
         margin-bottom: 30px;
-        flex-basis: 50%;
+        flex-basis: 100%;
     }
     #about .about-col-1 h2{
         font-size: 33px;
     }
     #about .about-col-2 img{
-        width: 100%;
+        width: 80%;
     }
     #about .about-col-2{
-        flex-basis: 50%;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
     }
     /* Question Section  */
+    #question{
+        height: min-content;
+        padding: 20px;
+    }
+    #question .question-con h2{
+        text-transform: uppercase;
+        color: #536942;
+        font-size: 42px;
+    }
+    #question p{
+        font-size: 15px;
+        color: #526840bf;
+        margin: 0px 0 2px;
+        padding: 0 0px;
+        text-align: center;
+    }
+    /* Footer Section */
+    footer .footer-col{
+        padding: 3px;
+    }
 
 
+}
+@media (max-width: 520px) {
+    /* Hero  */
+    .hero-container p {
+        padding: 0px 50px;
+    }
+    #question p{
+        font-size: 15px;
+        color: #526840bf;
+        margin: 0px 0 2px;
+        padding: 0 0px;
+        text-align: center;
+    }
+    /* Service  */
+    #services .service-section {
+        margin-top: 38px;
+    }
+    .service-column {
+        margin-top: 37px;
+    }
+    /* Review */
+    #review {
+    margin-top: 80px;
+    }
 }
